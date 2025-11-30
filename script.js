@@ -143,7 +143,7 @@ window.addEventListener("load", () => {
 });
 
 // Counter animation for stats
-function animateCounter(element, target, duration = 2000) {
+function animateCounter(element, target, duration = 1200) {
   const start = 0;
   const increment = target / (duration / 16);
   let current = start;
@@ -151,10 +151,10 @@ function animateCounter(element, target, duration = 2000) {
   const timer = setInterval(() => {
     current += increment;
     if (current >= target) {
-      element.textContent = target;
+      element.textContent = target + "+";
       clearInterval(timer);
     } else {
-      element.textContent = Math.floor(current);
+      element.textContent = Math.floor(current) + "+";
     }
   }, 16);
 }
@@ -170,9 +170,8 @@ const statsObserver = new IntersectionObserver(
           // Only animate if it's a number
           if (!isNaN(text.replace("+", ""))) {
             const value = parseInt(text.replace("+", ""));
-            stat.textContent = "0";
+            stat.textContent = "0+";
             animateCounter(stat, value);
-            stat.textContent += "+";
           }
         });
         statsObserver.unobserve(entry.target);

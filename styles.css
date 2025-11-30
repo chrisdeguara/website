@@ -68,73 +68,19 @@ body {
     var(--primary-color),
     var(--secondary-color)
   );
+  background-size: 200% 100%;
+  background-position: 0% 0%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: -0.02em;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-position 0.3s ease;
   padding-right: 2px;
-  position: relative;
-  z-index: 1;
-}
-
-.nav-brand::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  z-index: -1;
-}
-
-.nav-brand:hover::before {
-  opacity: 1;
-  animation: drawCircle 0.6s ease-out forwards;
-}
-
-@keyframes drawCircle {
-  0% {
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-  }
-  25% {
-    border-top-color: var(--primary-color);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-  }
-  50% {
-    border-top-color: var(--primary-color);
-    border-right-color: var(--secondary-color);
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-  }
-  75% {
-    border-top-color: var(--primary-color);
-    border-right-color: var(--secondary-color);
-    border-bottom-color: var(--secondary-color);
-    border-left-color: transparent;
-  }
-  100% {
-    border-top-color: var(--primary-color);
-    border-right-color: var(--secondary-color);
-    border-bottom-color: var(--secondary-color);
-    border-left-color: var(--primary-color);
-  }
 }
 
 .nav-brand:hover {
-  transform: scale(1.05);
-  letter-spacing: 0;
+  background-position: 100% 0%;
 }
 
 .nav-menu {
@@ -942,21 +888,11 @@ section {
 }
 
 /* Animations */
-@keyframes fadeIn {
+@keyframes rotate {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    transform: rotate(0deg);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: rotate(360deg);
   }
-}
-
-.hero-content,
-.section-title,
-.service-card,
-.timeline-item,
-.education-card {
-  animation: fadeIn 0.6s ease-out;
 }

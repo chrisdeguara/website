@@ -851,6 +851,8 @@ section {
   width: 100%;
   cursor: pointer;
   font-size: 1.1rem;
+  margin: 0 auto;
+  display: block;
 }
 
 .form-message {

@@ -195,3 +195,6 @@ if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     el.style.transition = "none";
   });
 }
+
+// Dynamic copyright year
+document.getElementById("year").textContent = new Date().getFullYear();

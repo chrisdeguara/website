@@ -391,6 +391,42 @@
             Let's discuss how I can help you save time, reduce costs, and scale
             efficiently.
           </p>
+          
+          <!-- Contact Form -->
+          <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="4fad75aa-0b51-42ef-b12d-a88d43534aec">
+            <input type="hidden" name="subject" value="New Contact Form Submission from chrisdeguara.tech">
+            <input type="hidden" name="from_name" value="Chris Deguara Website">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-large">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            
+            <div id="formMessage" class="form-message"></div>
+          </form>
+          
+    
+          <div class="contact-divider">
+            <span>or connect via</span>
+          </div>
+          
           <div class="contact-buttons">
             <a
               href="https://www.malt.com/profile/chrisdeguara"

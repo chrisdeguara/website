@@ -57,6 +57,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 20px;
+  transition: padding 0.3s ease;
+}
+
+.navbar.shrink .container {
+  padding: 0.5rem 20px;
 }
 
 .nav-brand {
@@ -75,8 +80,12 @@ body {
   background-clip: text;
   letter-spacing: -0.02em;
   cursor: pointer;
-  transition: background-position 0.3s ease;
+  transition: background-position 0.3s ease, font-size 0.3s ease;
   padding-right: 2px;
+}
+
+.navbar.shrink .nav-brand {
+  font-size: 1.4rem;
 }
 
 .nav-brand:hover {

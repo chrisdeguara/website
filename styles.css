@@ -388,6 +388,17 @@ section {
   vertical-align: middle;
 }
 
+.service-icon i {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .service-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -458,6 +469,17 @@ section {
   margin-right: 1rem;
   display: inline-block;
   vertical-align: middle;
+}
+
+.work-icon i {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .work-card h3 {
@@ -673,6 +695,17 @@ section {
   margin-right: 1rem;
   display: inline-block;
   vertical-align: middle;
+}
+
+.education-icon i {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .education-card h3 {

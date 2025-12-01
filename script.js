@@ -1,3 +1,7 @@
+window.addEventListener("load", function () {
+  var spinner = document.getElementById("spinner-overlay");
+  if (spinner) spinner.style.display = "none";
+});
 // Mobile Navigation Toggle
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");

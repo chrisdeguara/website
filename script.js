@@ -230,11 +230,18 @@ if (contactForm) {
       const data = await response.json();
 
       if (data.success) {
-        formMessage.textContent =
-          "Thank you! Your message has been sent successfully. I'll get back to you soon.";
+        formMessage.innerHTML =
+          '<i class="fas fa-check"></i> Thank you! Your message has been sent successfully. I\'ll get back to you soon.';
         formMessage.className = "form-message success";
         formMessage.style.display = "block";
         contactForm.reset();
+        setTimeout(() => {
+          formMessage.style.opacity = "0";
+          setTimeout(() => {
+            formMessage.style.display = "none";
+            formMessage.style.opacity = "1";
+          }, 500);
+        }, 5000);
       } else {
         throw new Error(data.message || "Something went wrong");
       }
